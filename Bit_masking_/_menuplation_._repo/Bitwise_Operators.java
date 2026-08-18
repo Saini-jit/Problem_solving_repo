@@ -47,10 +47,12 @@ public class Bitwise_Operators{
          /*
          Left Shift = <<
          5<<2  ...000101 << 2 =...010100
-        */
+        using right shift operator 1's means multiplication by '2^1' for example 5*(2)^2
+         */
          System.out.println(5<<2);
          /*
-         6>>2  ...000101 >> 2 =...000001
+         5>>2  ...000101 >> 2 =...000001
+         using right shift operator 1's means devision by '2^1' for example 5/(2)^2
          */
          System.out.println(5>>2);
 

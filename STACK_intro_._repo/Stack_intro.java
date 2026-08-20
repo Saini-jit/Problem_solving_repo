@@ -25,9 +25,24 @@ public class Stack_intro{
             return top;
         }
         else{
-            return arr[top];
-            top--;
+            return arr[top--];
         }
+    }
+
+    public int peek(){
+        return arr[top];
+    }
+
+    public boolean isimpty(){
+        return top==(-1);
+    }
+    
+    public boolean isfull(){
+        return top==(capicity-1);
+    }
+
+    public int Size(){
+        return top+1;
     }
         
     public static void main(String[] args) {
@@ -47,8 +62,24 @@ public class Stack_intro{
 
         //making stack using array
 
-        
-        
+        Stack_intro stack= new Stack_intro(5);
+        System.out.println(stack.isimpty());
+        stack.push(11);
+        System.out.println(stack.isimpty());
+        stack.push(12);
+        stack.push(13);
+        stack.push(14);
+        stack.push(15);
+        stack.push(16);
+        System.out.println(stack.isfull());
+        stack.pop();
+        stack.pop();
 
+        System.out.println(stack.Size());
+        System.out.println(stack.peek());
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        stack.pop();
     }
 }

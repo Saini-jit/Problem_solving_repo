@@ -13,7 +13,7 @@ public class Stack_using_dinamic_array_implimentation{
         capicity<<=1;
         int[] newarr=new int[capicity];
         int i=0;
-        while(i<top){
+        while(i<=top){
             newarr[i]=arr[i];
             i++;
         }
@@ -38,16 +38,21 @@ public class Stack_using_dinamic_array_implimentation{
     }
 
     public int pop(){
-        if(top==-1){
+        if(top==(-1)){
             System.out.println("Stack is Impty");
             return -1;
         }
         return arr[top--];
     }
 
+    public boolean isimpty(){
+        return top==(-1);
+    }
+
 
     public static void main(String[] args) {
         Stack_using_dinamic_array_implimentation st=new Stack_using_dinamic_array_implimentation();
+        System.out.println(st.isimpty());
         st.push(1);
         st.push(1);
         st.push(1);
@@ -61,10 +66,9 @@ public class Stack_using_dinamic_array_implimentation{
         System.out.println(st.size());
         System.out.println(st.capicity);
         System.out.println(st.pop());
-        System.out.println(st.top);
         System.out.println(st.peek());
         System.out.println(st.size());
         System.out.println(st.capicity);
-        
+        System.out.println(st.isimpty());
     }
 }

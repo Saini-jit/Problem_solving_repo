@@ -30,12 +30,21 @@ public class Stack_using_dinamic_array_implimentation{
     }
 
     public int peek(){
-        return arr[top];
+        return arr[top]; //it is giving rong answer
     }
 
     public int size(){
         return top+1;
     }
+
+    public int pop(){
+        if(top==-1){
+            System.out.println("Stack is Impty");
+            return -1;
+        }
+        return arr[top--];
+    }
+
 
     public static void main(String[] args) {
         Stack_using_dinamic_array_implimentation st=new Stack_using_dinamic_array_implimentation();
@@ -48,6 +57,11 @@ public class Stack_using_dinamic_array_implimentation{
         System.out.println(st.size());
         System.out.println(st.capicity);
         st.push(2);
+        System.out.println(st.peek());
+        System.out.println(st.size());
+        System.out.println(st.capicity);
+        System.out.println(st.pop());
+        System.out.println(st.top);
         System.out.println(st.peek());
         System.out.println(st.size());
         System.out.println(st.capicity);

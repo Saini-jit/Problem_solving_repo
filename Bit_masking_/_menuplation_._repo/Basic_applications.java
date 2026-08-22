@@ -1,7 +1,7 @@
 public class Basic_applications {
 
     // set a bit on any position in a number
-    public static int setbit(int num, int pos){
+    public int setbit(int num, int pos){
 
         pos&=0xF;  //pos%=16;  means returns from 0 to 15 either pos is small then 16 or more then 16;
 
@@ -57,14 +57,28 @@ public class Basic_applications {
         }}
         return c+1;
     }
+
+    static int rightmostsetbit(int num){
+        if(num==0){
+            return 0;
+        }
+        if((num&1)==1){
+            return 1;
+        }
+        else{
+        num-=1;
+        int count=0;
+        while((num&1)!=0){
+            count++;
+            num>>=1;
+        }
+        return count+1;
+    }}
     public static void main(String[] args) {
 
         //if function is not static then have to create an object
         Basic_applications b=new Basic_applications();
         System.out.println(b.setbit(5,3)); 
-
-        //if function is static then no need to create object
-        System.out.println(setbit(4, 3));   
 
         System.out.println(unsetbit(7,17));
 
@@ -77,5 +91,7 @@ public class Basic_applications {
         System.out.println(setbitcount(7));
 
         System.out.println(rightsetbit(10));
+
+        System.out.println(rightmostsetbit(8));
     }
 }

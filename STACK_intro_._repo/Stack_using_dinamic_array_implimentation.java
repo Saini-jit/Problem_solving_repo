@@ -30,7 +30,7 @@ public class Stack_using_dinamic_array_implimentation{
     }
 
     public int peek(){
-        return arr[top]; //it is giving rong answer
+        return arr[top]; 
     }
 
     public int size(){
@@ -53,15 +53,15 @@ public class Stack_using_dinamic_array_implimentation{
     public static void main(String[] args) {
         Stack_using_dinamic_array_implimentation st=new Stack_using_dinamic_array_implimentation();
         System.out.println(st.isimpty());
-        st.push(1);
-        st.push(1);
-        st.push(1);
-        st.push(1);
-        st.push(1);
+        st.push(11);
+        st.push(12);
+        st.push(13);
+        st.push(14);
+        st.push(15);
         System.out.println(st.peek());
         System.out.println(st.size());
         System.out.println(st.capicity);
-        st.push(2);
+        st.push(16);
         System.out.println(st.peek());
         System.out.println(st.size());
         System.out.println(st.capicity);
